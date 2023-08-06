@@ -65,7 +65,7 @@ async function addNewUser(e) {
     id: Date.now()
   }
 
-  if (name.value.trim() === '' && surname.value.trim() === '' && age.value.trim() === '' && url.value.trim() === '') {
+  if (!name.value.trim() || !surname.value.trim() || !age.value.trim() || !url.value.trim() ) {
     alert('Заполните все поля');
     return;
   }
@@ -158,7 +158,7 @@ async function updateNewUser(e) {
     id: id
   }
 
-  if (editName.value.trim() === '' && editSurname.value.trim() === '' && editAge.value.trim() === '' && editUrl.value.trim() === '') {
+  if (!editName.value.trim() || !editSurname.value.trim() || !editAge.value.trim() || !editUrl.value.trim() ) {
     alert('Заполните все поля')
     return
   }
